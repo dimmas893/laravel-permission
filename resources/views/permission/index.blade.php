@@ -30,7 +30,7 @@
         </tr>
         @foreach ($permission as $key => $data)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $data->name }}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('permission.show', $data->id) }}">Show</a>
@@ -51,5 +51,5 @@
         @endforeach
     </table>
 
-    {!! $permission->render() !!}
+    {{-- {!! $permission->render() !!} --}}
 @endsection

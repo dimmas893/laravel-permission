@@ -30,11 +30,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Roles:</strong>
-                @if (!empty($user->getRoleNames()))
-                    @foreach ($user->getRoleNames() as $v)
-                        <label class="badge badge-success">{{ $v }}</label>
+
+                {{$user->getRoleNames()}}
+                {{-- @if (!empty($user->getRoleNames()))
+                    @foreach ($user->getRoleNames() as $value)
+                        <label class="badge badge-success">{{ $value }}</label>
                     @endforeach
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>

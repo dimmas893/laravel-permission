@@ -30,7 +30,7 @@
         </tr>
         @foreach ($roles as $key => $role)
             <tr>
-                <td>{{ ++$i }}</td>
+                <td>{{ $loop->iteration }}</td>
                 <td>{{ $role->name }}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('roles.show', $role->id) }}">Show</a>
@@ -47,5 +47,5 @@
         @endforeach
     </table>
 
-    {!! $roles->render() !!}
+    {{-- {!! $roles->render() !!} --}}
 @endsection
